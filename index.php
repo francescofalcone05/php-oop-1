@@ -13,23 +13,21 @@ class Movie
         $percorso = $this->copertina;
         return $percorso;
     }
+
+    public function __construct($titolo, $annoDiProduzione, $lingua, $piattaforma, $copertina)
+    {
+        $this->titolo = $titolo;
+        $this->annoDiProduzione = $annoDiProduzione;
+        $this->lingua = $lingua;
+        $this->piattaforma = $piattaforma;
+        $this->copertina = $copertina;
+    }
 }
 
-$revenant = new Movie();
-$revenant->titolo = "Revenant";
-$revenant->annoDiProduzione = 2015;
-$revenant->lingua = "EN";
-$revenant->piattaforma = "Netfilx";
-$revenant->copertina = "./img/The_Revenant.png";
-
-$ilPadrino = new Movie();
-$ilPadrino->titolo = "The Godfather";
-$ilPadrino->annoDiProduzione = 1972;
-$ilPadrino->lingua = "EN";
-$ilPadrino->piattaforma = "Netfilx";
-$ilPadrino->copertina = "./img/Don_Vito_Corleone.jpg";
+$revenant = new Movie("Revenant", 2015, "EN", "Netfilx", "./img/The_Revenant.png");
 
 
+$ilPadrino = new Movie("The Godfather", 1972, "EN", "Netfilx", "./img/Don_Vito_Corleone.jpg");
 
 
 ?>
