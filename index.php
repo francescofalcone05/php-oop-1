@@ -8,7 +8,7 @@ $revenant = new Movie("Revenant", 2015, "EN", "Netfilx", "./img/The_Revenant.png
 
 $ilPadrino = new Movie("The Godfather", 1972, "EN", "Netfilx", "./img/Don_Vito_Corleone.jpg");
 
-
+$movies = [$revenant, $ilPadrino];
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +41,18 @@ $ilPadrino = new Movie("The Godfather", 1972, "EN", "Netfilx", "./img/Don_Vito_C
             <li><?= "Lingua: $ilPadrino->lingua" ?></li>
             <li><?= "Piattaforma: $ilPadrino->piattaforma" ?></li>
         </ul>
+
+        <div>
+            <?php foreach ($movies as $film) { ?>
+                <img src="<?= $film->getImg() ?>" alt="">
+                <ul>
+                    <li><?= "Titolo: $film->titolo" ?></li>
+                    <li><?= "Anno: $film->annoDiProduzione" ?></li>
+                    <li><?= "Lingua: $film->lingua" ?></li>
+                    <li><?= "Piattaforma: $film->piattaforma" ?></li>
+                </ul>
+            <?php } ?>
+        </div>
 
     </div>
 

@@ -23,4 +23,9 @@ class Movie
         $this->piattaforma = $piattaforma;
         $this->copertina = $copertina;
     }
+
+    public function descrizione()
+    {
+        return "Titolo:";
+    }
 }
